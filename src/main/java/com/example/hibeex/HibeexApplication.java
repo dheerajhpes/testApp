@@ -8,33 +8,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
-
-interface  A{
-	default void show(){}
-	static void help(){
-
-	}
-}
-
-
-interface  B{
-	default void show(){}
-	default void help(){
-
-	}
-}
-
-class T{
-	int i;
-}
-
 @SpringBootApplication
-public class HibeexApplication extends T  implements A,B{
-    int i;
-	void help(int i){
-		this.i =i;
-		super.i=i;
-	}
+public class HibeexApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext context=SpringApplication.run(HibeexApplication.class, args);
@@ -46,10 +21,5 @@ public class HibeexApplication extends T  implements A,B{
 		employee.setJoining(new java.util.Date());
 		employee.setSalary(555500);
 		s.save(employee);
-	}
-
-	@Override
-	public void show() {
-		A.super.show();
 	}
 }
