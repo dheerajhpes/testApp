@@ -10,6 +10,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
+
 @SpringBootApplication
 public class HibeexApplication implements CommandLineRunner {
 
@@ -20,10 +21,11 @@ public class HibeexApplication implements CommandLineRunner {
 		ApplicationContext context=SpringApplication.run(HibeexApplication.class, args);
 	}
 
+
 	@Override
 	public void run(String... args) throws Exception {
 		SessionFactory sessionFactory=config.sessionFactory().getObject();
-		Session s=sessionFactory.openSession();
+			Session s=sessionFactory.openSession();
 		Employee employee=new Employee();
 		employee.setName("Dheeraj Gupta");
 		employee.setJoining(new java.util.Date());

@@ -18,9 +18,7 @@ public class HiberConfig {
     public LocalSessionFactoryBean sessionFactory() {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setPackagesToScan("com.example.hibeex.entity");
-        sessionFactory.setAnnotatedClasses(Employee.class);
         sessionFactory.setDataSource(dataSource);
-
         return sessionFactory;
     }
 }
